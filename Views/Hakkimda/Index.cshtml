@@ -1,0 +1,118 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Prompt:ital,wght@0,100;1,200&family=Rubik:wght@300&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@100&family=Rubik:wght@300&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300&display=swap" rel="stylesheet">
+    <title>Hakkımda</title>
+
+
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Rubik', sans-serif;
+            color: #333;
+            background: #f9f9f9;
+        }
+
+        .center {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        .yuvarlak {
+            width: 500px;
+            height: 500px;
+            border-radius: 50%;
+            
+            transition: transform 0.5s, filter 0.5s;
+            object-fit: cover;
+        }
+
+            .yuvarlak:hover {
+                transform: scale(1.2) rotate(360deg);
+                filter: brightness(1.5) saturate(1.5);
+            }
+
+        .name-title {
+            font-family: 'Rubik', cursive;
+            font-size: 70px;
+            color: cornflowerblue;
+            font-weight: bold;
+            text-align: center;
+            margin: 10px 0;
+        }
+
+        .subtitle {
+            font-size: 20px;
+            color: cornflowerblue;
+            text-align: center;
+            margin: 5px 0;
+        }
+
+        .card {
+            background: white;
+            margin: 20px;
+            padding: 20px;
+            border-radius: 10px;
+            
+        }
+
+        
+
+        
+    </style>
+</head>
+<body>
+    <div class="center">
+        <img class="yuvarlak" src="~/AdminPanelTemplate/img/cat.jpg" alt="this is a cat" />
+    </div>
+
+    <div>
+        <p class="name-title">Zeynep Karakaşlı</p>
+        <p class="subtitle">Computer Engineering Student</p>
+    </div>
+
+    <hr />
+
+    <div class="card">
+        <h5 class="card-header">Hakkımda/About Me</h5>
+        <div class="card-body">
+            <p class="icerik">MVC website project</p>
+            <ul class="icerik">
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>JavaScript</li>
+                <li>.NET MVC</li>
+                <li>MSSQL</li>
+            </ul>
+        </div>
+    </div>
+
+    <script>
+        document.querySelector('.yuvarlak').addEventListener('click', function () {
+            this.style.animation = 'none';
+            this.offsetHeight; // trigger reflow
+            this.style.animation = '';
+        });
+    </script>
+</body>
+</html>
+
+
